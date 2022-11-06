@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVT - Facundo Lanza</title>
+<style>
+body {margin:20px auto;padding:0;background-color:#d9d9d9;
+    font-family:arial, verdana;}
+h1 {font-size:20px;color: #666;}
+
+table {border-collapse: collapse;}    
+th {color:#333;text-align:center;padding:5px 10px;border:1px solid #666;}
+td{color:#666;padding:5px 10px;border:1px solid #666;}
+
+</style>
+</head>
+<body>
+   <div align="center">
+    <h1>Integrantes familia Lanza</h1>
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <th>Nombre</th>
+            <th>Fec. Nac.</th>
+            <th>Teléfono</th>
+        </tr>
+        {% for i in listaIntegrantes %}
+        <tr>
+          <td>{{i.nombre}}</td>
+          <td>{{i.fecnac}}</td>
+          <td>{{i.telefono}}</td>
+        </tr>
+      {% endfor %}
+   </table>
+    </div>
+</body>
+</html>
